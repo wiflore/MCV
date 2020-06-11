@@ -1,3 +1,7 @@
+import os 
+import random
+from IPython.display import clear_output
+
 def reader():
   k = int(input("k:")) 
   assert len(str(k)) > 4, "wrong format"
