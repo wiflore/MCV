@@ -6,9 +6,9 @@ import getpass
 
 
 def reader():
-  k = int(getpass.getpass("K: "))
+  k = int(getpass.getpass("k: "))
   assert len(str(k)) > 4, "wrong format"
-  k = k % 4 + 2
+  k = k % 3 + 2
   clear_output()
   input_ = input("copy:")
   clear_output()
@@ -23,9 +23,9 @@ def reader():
 def writer():
   date = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
   print(f"Current date: {date}")
-  k= int(getpass.getpass("K: "))
+  k= int(getpass.getpass("k: "))
   assert len(str(k)) > 4, "wrong format"
-  k = k % 4 + 2
+  k = k % 3 + 2
   clear_output()
   input_ = input("Write something: ")
   clear_output()
