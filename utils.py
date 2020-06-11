@@ -15,7 +15,7 @@ def reader():
   var = ""
   for ch in input_:
     var += chr((ord(ch) - 5 - k) + 5)
-  var = var.split("$#&/(#")[0]
+  var = var.split("$#&/(#")[1]
   with open("Output.txt", "w") as text_file:
     print(f"{var}", file=text_file)
   print("Done")
@@ -32,10 +32,17 @@ def writer():
   var = ""
   gar = "$#&/(#"
   noth = ""
-  for i in range(5):
+  for i in range(3):
+    noth+= chr(random.randint(65, 122))
+  noth+=gar
+  input_ = noth + input_
+
+  noth = ""
+  for i in range(2):
     noth+= chr(random.randint(65, 122))
   gar += noth
   input_ += gar
+
   for ch in input_:
     var += chr((ord(ch) - 5 + k) + 5)
   print(f"Current date: {date}")
