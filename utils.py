@@ -19,6 +19,8 @@ def reader():
   print("Done")
   
 def writer():
+  date = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+  print(f"Current date: {date}")
   k= int(input("k:"))
   assert len(str(k)) > 4, "wrong format"
   k = k % 4 + 2
@@ -34,7 +36,7 @@ def writer():
   input_ += gar
   for ch in input_:
     var += chr((ord(ch) - 5 + k) + 5)
-  print(datetime.now().strftime("%m/%d/%Y, %H:%M:%S"))
+  print(f"Current date: {date}")
   return var
 
 def reset_output():
