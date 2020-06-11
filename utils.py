@@ -5,13 +5,13 @@ from IPython.display import clear_output
 def reader():
   k = int(input("k:")) 
   assert len(str(k)) > 4, "wrong format"
-  k = k % 6 + 2
+  k = k % 4 + 2
   clear_output()
   input_ = input("copy:")
   clear_output()
   var = ""
   for ch in input_:
-    var += chr((ord(ch) - 90 - k) + 90)
+    var += chr((ord(ch) - 5 - k) + 5)
   var = var.split("$#&/(#")[0]
   with open("Output.txt", "w") as text_file:
     print(f"{var}", file=text_file)
@@ -20,7 +20,7 @@ def reader():
 def writer():
   k= int(input("k:"))
   assert len(str(k)) > 4, "wrong format"
-  k = k % 6 + 2
+  k = k % 4 + 2
   clear_output()
   input_ = input("Write something: ")
   clear_output()
@@ -32,7 +32,7 @@ def writer():
   gar += noth
   input_ += gar
   for ch in input_:
-    var += chr((ord(ch) - 90 + k) + 90)
+    var += chr((ord(ch) - 5 + k) + 5)
   return var
 
 def reset_output():
