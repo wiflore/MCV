@@ -2,9 +2,11 @@ import os
 import random
 from IPython.display import clear_output
 from datetime import datetime
+import getpass
+
 
 def reader():
-  k = int(input("k:")) 
+  k = int(getpass.getpass("K: "))
   assert len(str(k)) > 4, "wrong format"
   k = k % 4 + 2
   clear_output()
@@ -21,7 +23,7 @@ def reader():
 def writer():
   date = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
   print(f"Current date: {date}")
-  k= int(input("k:"))
+  k= int(getpass.getpass("K: "))
   assert len(str(k)) > 4, "wrong format"
   k = k % 4 + 2
   clear_output()
