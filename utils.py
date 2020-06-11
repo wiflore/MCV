@@ -1,6 +1,7 @@
 import os 
 import random
 from IPython.display import clear_output
+from datetime import datetime
 
 def reader():
   k = int(input("k:")) 
@@ -33,6 +34,7 @@ def writer():
   input_ += gar
   for ch in input_:
     var += chr((ord(ch) - 5 + k) + 5)
+  print(datetime.now().strftime("%m/%d/%Y, %H:%M:%S"))
   return var
 
 def reset_output():
