@@ -15,7 +15,7 @@ def reader():
   var = ""
   for ch in input_:
     var += chr((ord(ch) - 5 - k) + 5)
-  var = var.split("$#&/(#")[1]
+  var = var.split("$#&")[1]
   with open("Output.txt", "w") as text_file:
     print(f"{var}", file=text_file)
   print("Done")
@@ -30,7 +30,7 @@ def writer():
   input_ = input("Write something: ")
   clear_output()
   var = ""
-  gar = "$#&/(#"
+  gar = "$#&"
   noth = ""
   for i in range(3):
     noth+= chr(random.randint(65, 122))
